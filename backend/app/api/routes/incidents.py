@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Depends
+from datetime import datetime
 from sqlalchemy.orm import Session
 
 from app.db.database import get_db
@@ -57,6 +58,16 @@ def update_incident_status(
             }
 
     incident.status = status_update.status
+
+    if status_update.status == "CLOSED":
+
+        incident.resolved_at = datetime.utcnow()
+
+        mttr = incident.resolved_at - incident.created_at
+
+        incident.mttr_minutes = int(
+        mttr.total_seconds() / 60
+    )
 
     db.commit()
 

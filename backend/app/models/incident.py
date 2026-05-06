@@ -17,3 +17,5 @@ class Incident(Base):
     status = Column(String, default="OPEN")
 
     created_at = Column(DateTime, default=datetime.utcnow)
+    resolved_at = Column(DateTime, nullable=True)
+    mttr_minutes = Column(Integer, nullable=True)
