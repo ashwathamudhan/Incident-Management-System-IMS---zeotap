@@ -1,59 +1,43 @@
-# Incident Management System (IMS)
+# 🚨 Incident Management System
 
 A lightweight Incident Management System built for the Zeotap Infrastructure / SRE Internship Assignment.
 
+The project simulates basic SRE incident workflows including ingestion, tracking, RCA validation, MTTR calculation, and containerized deployment.
+
 ---
 
-# Features
+# ✨ Features
 
 - Incident ingestion API
-- Incident tracking workflow
-- Severity-based incidents
-- RCA enforcement before closure
-- MTTR calculation
-- React dashboard
-- Dockerized setup using Docker Compose
+- Incident lifecycle tracking
+- Severity-based workflows
+- RCA validation for P1/P2 incidents
+- MTTR (Mean Time To Resolution) calculation
+- React dashboard for incident visualization
+- Dockerized using Docker Compose
 
 ---
 
-# Tech Stack
+# 🛠 Tech Stack
 
-## Backend
-
-- FastAPI
-- SQLite
-- SQLAlchemy
-- Pydantic
-
-## Frontend
-
-- ReactJS
-
-## DevOps
-
-- Docker
-- Docker Compose
+| Layer            | Technology              |
+| ---------------- | ----------------------- |
+| Backend          | FastAPI                 |
+| Frontend         | ReactJS                 |
+| Database         | SQLite                  |
+| ORM              | SQLAlchemy              |
+| Validation       | Pydantic                |
+| Containerization | Docker & Docker Compose |
 
 ---
 
-# Architecture
+# 🏗 Architecture
 
 ![Architecture](screenshots/architecture.png)
 
 ---
 
-# API Endpoints
-
-| Method | Endpoint               | Description            |
-| ------ | ---------------------- | ---------------------- |
-| GET    | /health                | Health check           |
-| POST   | /ingest                | Create incident        |
-| GET    | /incidents             | List incidents         |
-| PUT    | /incidents/{id}/status | Update incident status |
-
----
-
-# Running Locally
+# 🚀 Run Locally
 
 ## Backend
 
@@ -73,7 +57,7 @@ npm start
 
 ---
 
-# Running with Docker
+# 🐳 Run with Docker
 
 ```bash
 docker compose up --build
@@ -93,7 +77,18 @@ http://localhost:8000/docs
 
 ---
 
-# Screenshots
+# 📡 API Endpoints
+
+| Method | Endpoint                 | Purpose                |
+| ------ | ------------------------ | ---------------------- |
+| GET    | `/health`                | Health check           |
+| POST   | `/ingest`                | Create incident        |
+| GET    | `/incidents`             | List incidents         |
+| PUT    | `/incidents/{id}/status` | Update incident status |
+
+---
+
+# 📸 Screenshots
 
 ## Swagger API
 
@@ -101,7 +96,7 @@ http://localhost:8000/docs
 
 ---
 
-## React Dashboard
+## Incident Dashboard
 
 ![Dashboard](screenshots/dashboard.png)
 
@@ -113,33 +108,33 @@ http://localhost:8000/docs
 
 ---
 
-# Key Functionalities
+# 🔍 Key Functionalities
 
-## Incident Lifecycle
+### Incident Workflow
 
 - OPEN
 - ACKNOWLEDGED
 - CLOSED
 
-## RCA Validation
+### RCA Enforcement
 
-Incidents with severity P1/P2 require RCA before closure.
+P1/P2 incidents require RCA before closure.
 
-## MTTR Calculation
+### MTTR Calculation
 
-System calculates Mean Time To Resolution automatically.
+Automatically calculates incident resolution time.
 
 ---
 
-# Future Improvements
+# 🔮 Future Improvements
 
-- Authentication
+- Authentication & RBAC
 - Kubernetes deployment
 - Redis caching
-- Monitoring and alerting
+- Monitoring integration
 
 ---
 
-# Author
+# 👨‍💻 Author
 
-Ashwath Amudhan C A
+**Ashwath Amudhan C A**
