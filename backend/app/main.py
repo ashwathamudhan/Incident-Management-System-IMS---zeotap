@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-
+from app.models.rca import RCA
 from app.api.router import api_router
 
 from app.db.database import engine
